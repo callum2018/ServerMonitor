@@ -9,6 +9,6 @@ load_2 = output [-2]
 load_3 = output [-1]
 load_average = load_1 + load_2 + load_3
 
-print (time)
+print (uptime)
 print (user)
 print ("Load average for the last 1 minute, 5 minutes and 15 minutes is: ", load_average)
