@@ -14,7 +14,7 @@ def email(gmail_account, password, recipient, subject, message):
     server.close()
 
 gmail = "roomnineteenclass@gmail.com"
-password = "muppetational"
+password = "************"
 recipient = "rebeccamacdonald2018@mallowcollege.email"
 
 
