@@ -3,8 +3,7 @@
 
 import os
 
-check = input("Shutdown computer ? (y/n): ")
-if check == 'n':
-    exit()
-else:
-    os.system('shutdown -h 1')
+
+def shut_down(shutdown="shut"):
+    if shutdown == "shut":
+        return os.system('shutdown -P')
