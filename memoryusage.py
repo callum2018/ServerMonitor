@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 
 
+
 import psutil
 
-print(psutil.virtual_memory())
+usage = psutil.virtual_memory()
+
+
+def memory_usage(memusage="mem"):
+    if memusage == "mem":
+        return usage
