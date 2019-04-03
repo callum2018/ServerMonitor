@@ -10,12 +10,12 @@ def memory_usage(memusage="all"):
     if memusage == "all":
         return usage
     elif memusage == "free":
-        return psutil.virtual_memory().free
+        return round(psutil.virtual_memory().free / (1024.0 ** 3), 2)
     elif memusage == "total":
-        return psutil.virtual_memory().total
-    elif memusage == "avaiable":
-        return psutil.virtual_memory().available
+        return round(psutil.virtual_memory().total / (1024.0 ** 3), 2)
+    elif memusage == "available":
+        return round(psutil.virtual_memory().available / (1024.0 ** 3), 2)
     elif memusage == "percent":
         return psutil.virtual_memory().percent
     elif memusage == "used":
-        return psutil.virtual_memory().used
+        return round(psutil.virtual_memory().used / (1024.0 ** 3), 2)
