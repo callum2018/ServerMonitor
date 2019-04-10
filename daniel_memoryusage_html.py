@@ -29,7 +29,7 @@ while True:
     html += "</body></html>"
 
     print(message)
-    report = open("servermonitor.html", "w")
+    report = open("memoryusage.html", "w")
     print(html, file=report)
     report.close()
 
