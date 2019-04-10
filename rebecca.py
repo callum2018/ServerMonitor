@@ -11,6 +11,10 @@ adding them together to make a string and thats what is returned.
 user is taking each peice of information and [-7] and returning it
 time is taking each peice of information and [0]"""
 
+__author__ = "Rebecca MacDonald"
+__version__ = "1.0"
+__emailaddress__ = "rebeccamacdonald2018@mallowcollege.email"
+
 from subprocess import check_output
 import socket
 import smtplib
