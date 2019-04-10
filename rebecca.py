@@ -32,11 +32,12 @@ def time():
     return time
 
 def get_hostname():
-
+    """Returns the host name."""
     name = socket.gethostname()
     return name
 
 def email(gmail_account, password, recipient, subject, message):
+    """this is the send email."""
     content = """From: %s\nTo: %s\nSubject: %s\n\n%s
     """ % (gmail_account, recipient, subject, message)
     server = smtplib.SMTP("smtp.gmail.com", 587)
@@ -51,7 +52,7 @@ password = "************"
 recipient = "roomnineteenclass@gmail.com"
 
 
-email(gmail, password, recipient, "", "This is a warning from your computer about the CPU temperature.")
+email(gmail, password, recipient, "", "This is a warning from your computer about the *****.")
 
 
 
