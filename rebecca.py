@@ -1,4 +1,15 @@
-"""Module to return uptime information."""
+#!/usr/bin/env python3
+"""Module to return uptime information, sending to email, hostname of computer.
+ Using the smtplib that i imported for the email it needs gmail_account, password, recipient, subject and message. 
+Using the socket function I imported to get the host name of the computer sending the message.
+Using the check_output function I imported to get the uptime information which I then split up the information 
+and get it to return the desired information counting from the end and counting to 0 we start at the end as the 
+amount of argv can change depending on how long it has been up. 
+uptime -p gives the pretty version then [1:] to give you all starting from 1 which leaves out the word up.
+load is taking each peice of information and [-3] [-2][-1] and then 
+adding them together to make a string and thats what is returned.
+user is taking each peice of information and [-7] and returning it
+time is taking each peice of information and [0]"""
 
 from subprocess import check_output
 import socket
@@ -37,7 +48,7 @@ def get_hostname():
     return name
 
 def email(gmail_account, password, recipient, subject, message):
-    """this is the send email."""
+    """this is the send email ."""
     content = """From: %s\nTo: %s\nSubject: %s\n\n%s
     """ % (gmail_account, recipient, subject, message)
     server = smtplib.SMTP("smtp.gmail.com", 587)
@@ -46,17 +57,3 @@ def email(gmail_account, password, recipient, subject, message):
     server.login(gmail_account, password)
     server.sendmail(gmail_account, recipient, content)
     server.close()
-
-gmail = "roomnineteenclass@gmail.com"
-password = "************"
-recipient = "roomnineteenclass@gmail.com"
-
-
-email(gmail, password, recipient, "", "This is a warning from your computer about the *****.")
-
-
-
-filename = "cpu.log"
-gmail = "roomnineteenclass@gmail.com"
-password = "***********"
-recipient = "roomnineteenclass@gmail.com"
