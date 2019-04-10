@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-This program monitors the server and outputs to screen, to HTML.
+This program monitors the server and outputs to screen, to HTML and an email.
 """
 __author__ = "Rebecca MacDonald"
 __version__ = "1.0"
@@ -31,7 +31,7 @@ while True:
     html += "<p><b>Time</b> is: " + time()  # rebecca
     html += "<p><b>The Host Hame is: </b> is " + get_hostname()  # rebecca
 
-    # add your HTML contribution here
+    # This is what will be returned, HTML file, Email, Message,
     html += "</body></html>"
     email("roomnineteenclass@gmail.com", "*************", "rebeccamacdonald2018@mallowcollege.email", "server monitor", "This is a update from your computer about " + message)
     print(message)
