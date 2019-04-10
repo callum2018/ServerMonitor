@@ -14,6 +14,5 @@ def system_date():
     date = output[2] + " " + output[1] + " " + output[5]
     return date
 
-
-print("The date is", (system_date()))
-print("The time is", system_time())
+# print("The date is", (system_date()))
+# print("The time is", system_time())
