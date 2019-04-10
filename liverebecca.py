@@ -20,6 +20,7 @@ while True:
     message += "\nUser is " + user()  # rebecca
     message += "\nTime is " + time()  # rebecca
     message += "\nThe Host Hame is " + get_hostname()  # rebecca
+    message += "\n\n ----------------\n\n"
     # add your message contribution here
 
     html = "<html><head><title>Server Monitor Report</title></head><body>"
