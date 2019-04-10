@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+from subprocess import check_output
+
+output = check_output(["uptime",]) .decode("utf-8").split()
+
+
+users = int(output[-7])
+time = output[0]
+
+
+identity = check_output(["whoami"]) .decode("utf-8")
+
+print(users, "users", identity)
