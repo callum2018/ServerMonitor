@@ -16,6 +16,8 @@ from rebecca import *
 from vio import *
 from eoin import *
 from sean import *
+from matthew import *
+from adam import *
 
 # add your import
 
@@ -24,6 +26,7 @@ __credits__ = 'Copyright 2019, Computer Systems & Networks Class 2019, Mallow Co
 __version__ = 'Prototype 0.1'
 
 interval = 5 * 60 # 5 minutes in seconds
+speech = True  # matthew
 
 while True:
     message = "SERVER MONITOR 0.1\n"
@@ -34,7 +37,8 @@ while True:
     message += "\nUser is: " + user()  # rebecca
     message += "\nThere are " + str(users()) + " users and " + identity() + " is current user"  # sean
     message += "\nTime is " + current_time()  # rebecca
-    message += "\nThe Host Hame is: " + get_hostname()  # rebecca
+    message += "\nThe Hostname is: " + get_hostname()  # rebecca
+    spokenmessage = message
     message += "\n\n ----------------\n\n"
 
     # add your message contribution here
@@ -48,7 +52,7 @@ while True:
     html += "<p><b>User</b> is: " + user()  # rebecca
     html += "<p>There are " + str(users()) + " users and " + identity() + " is current user"  # sean
     html += "<p><b>Time</b> is: " + current_time()  # rebecca
-    html += "<p><b>The Host Hame is: </b> is " + get_hostname()  # rebecca
+    html += "<p><b>The Hostname is: </b> is " + get_hostname()  # rebecca
 
     # add your HTML contribution here
 
@@ -61,9 +65,10 @@ while True:
     report = open("servermonitor-report.html", "w")
     print(html, file=report)
     report.close()
-    email("roomnineteenclass@gmail.com", "*************", "rebeccamacdonald2018@mallowcollege.email", "server monitor",
-          "This is a update from your computer about " + message)  # rebecca
-
+    # email("roomnineteenclass@gmail.com", "*************", "rebeccamacdonald2018@mallowcollege.email", "server monitor",
+    #     "This is a update from your computer about " + message)  # rebecca
+    if speech:
+        speak(spokenmessage + "\nThis message will self destruct in 5 seconds, 4, 3, 2, 1, boom")
     # add any testing function here
 
     break  # break in loop for testing and PyDoc

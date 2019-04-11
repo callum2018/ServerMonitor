@@ -10,6 +10,7 @@ from playsound import playsound
 
 
 def speak(text):
+    """"""
     filename = "speech.mp3"
     talk = gTTS(text)
     talk.save(filename)
