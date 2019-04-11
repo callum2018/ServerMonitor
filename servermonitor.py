@@ -38,6 +38,7 @@ while True:
     message += "\nThere are " + str(users()) + " users and " + identity() + " is current user"  # sean
     message += "\nTime is " + current_time()  # rebecca
     message += "\nThe Hostname is: " + get_hostname()  # rebecca
+    message += "\nThe status of the server is: " + pingtest()  # adam
     spokenmessage = message
     message += "\n\n ----------------\n\n"
 
@@ -53,6 +54,7 @@ while True:
     html += "<p>There are " + str(users()) + " users and " + identity() + " is current user"  # sean
     html += "<p><b>Time</b> is: " + current_time()  # rebecca
     html += "<p><b>The Hostname is: </b> is " + get_hostname()  # rebecca
+    html += "<p><b>The status of the server is: </b> is " + pingtest()  # adam
 
     # add your HTML contribution here
 
