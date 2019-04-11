@@ -2,13 +2,12 @@
 
 from subprocess import check_output
 
-output = check_output(["uptime",]) .decode("utf-8").split()
+def users():
+    output = check_output(["uptime"]) .decode("utf-8").split()
+    return int(output[-7])
 
 
-users = int(output[-7])
-time = output[0]
+def identity():
+    return check_output(["whoami"]) .decode("utf-8").split()[0]
 
-
-identity = check_output(["whoami"]) .decode("utf-8")
-
-print(users, "users", identity)
+#print(user_info())
