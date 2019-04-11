@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Can be combined within codes that need an alarm
+Can be combined within codes that need an alarm.
+Requires easygui
 """
 import sys
 import time

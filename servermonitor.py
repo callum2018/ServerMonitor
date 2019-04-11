@@ -1,26 +1,28 @@
 #!/usr/bin/env python3
 
-"""
-This program monitors the server and outputs to screen, to HTML.
+"""This program monitors the server and outputs to screen, to HTML.  ...
 
-Add more documentation ...
+TO DO:
 
-"""
+    Daniel: consolidate into single module called daniel.py
+    Sean: upload files
+    Matthew, Daniel, Adam, Sean: add code to servermonitor.py
+    Vio: add bell to servermonitor.py
 
-__author__ = 'Computer Systems & Networks 2019: Rebecca, Vio, Eoin'
-__copyright__ = 'Copyright 2019, Computer Systems & Networks.'
-__credits__ = ['Road Runner', 'Road Runners best friend Harrold']
-__license__ = 'GPL'
-__version__ = '0.1'
-__maintainer__ = ''
-__email__ = 'eoinospealain@mallowcollege.ie'
-__status__ = 'Prototype'
+    Eoin, Vio: review integration.
+    Rebecca: correct time() code error.
+
+    Generate all pydoc documenation and add to GitHub."""
 
 from time import sleep
 from rebecca import *
 from vio import *
 from eoin import *
 # add your import
+
+__author__ = 'Computer Systems & Networks 2019: Rebecca, Vio, Eoin'
+__credits__ = 'Copyright 2019, Computer Systems & Networks Class 2019, Mallow College, eoinospealain@mallowcollege.ie, released on GPL.'
+__version__ = 'Prototype 0.1'
 
 interval = 5 * 60 # 5 minutes in seconds
 
@@ -31,9 +33,10 @@ while True:
     message += "\nUptime is " + up_time()  # rebecca
     message += "\nLoad is " + load()  # rebecca
     message += "\nUser is " + user()  # rebecca
-    message += "\nTime is " + time()  # rebecca
+    # error message += "\nTime is " + time()  # rebecca
     message += "\nThe Host Hame is " + get_hostname()  # rebecca
     message += "\n\n ----------------\n\n"
+
     # add your message contribution here
 
     html = "<html><head><title>Server Monitor Report</title></head><body>"
@@ -43,20 +46,22 @@ while True:
     html += "<p><b>Uptime</b> is: " + up_time()  # rebecca
     html += "<p><b>Load</b> is: " + load()  # rebecca
     html += "<p><b>User</b> is: " + user()  # rebecca
-    html += "<p><b>Time</b> is: " + time()  # rebecca
+    # error html += "<p><b>Time</b> is: " + time()  # rebecca
     html += "<p><b>The Host Hame is: </b> is " + get_hostname()  # rebecca
+
     # add your HTML contribution here
 
     html += "</body></html>"
 
     print(message)
-    dialog(message)  # vio
-    report = open("servermonitor.html", "w")
+    dialog(message, "Server Monitor 0.1")  # vio
+    report = open("servermonitor-report.html", "w")
     print(html, file=report)
     report.close()
-    email("roomnineteenclass@gmail.com", "*************", "rebeccamacdonald2018@mallowcollege.email", "server monitor",
-          "This is a update from your computer about " + message)  # rebecca
+    # email("roomnineteenclass@gmail.com", "*************", "rebeccamacdonald2018@mallowcollege.email", "server monitor",
+    #      "This is a update from your computer about " + message)  # rebecca
 
     # add any testing function here
 
+    break  # break in loop for testing and PyDoc
     sleep(interval)

@@ -1,6 +1,0 @@
-Daniel: consolidate into single module called daniel.py
-Sean: upload files
-Matthew, Daniel, Adam, Sean: add code to servermonitor.py
-Vio: add bell to servermonitor.py
-
-Generate all pydoc documenation and add to GitHub.
