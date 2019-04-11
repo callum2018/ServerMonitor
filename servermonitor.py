@@ -15,6 +15,8 @@ from time import sleep
 from rebecca import *
 from vio import *
 from eoin import *
+from sean import *
+
 # add your import
 
 __author__ = 'Computer Systems & Networks 2019: Rebecca, Vio, Eoin, Sean, Adam, Matthew'
