@@ -40,7 +40,7 @@ def user():
     return user
 
 
-def time():
+def current_time():
     """Returns the time."""
     output = check_output(["uptime"]).decode("utf-8").split()
     time = output[0]
