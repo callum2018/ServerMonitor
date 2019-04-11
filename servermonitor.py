@@ -5,13 +5,11 @@
 TO DO:
 
     Daniel: consolidate into single module called daniel.py
-    Sean: upload files
     Matthew, Daniel, Adam, Sean: add code to servermonitor.py
 
     Eoin, Vio: review integration.
-    Rebecca: correct time() code error.
 
-    Generate all pydoc documenation and add to GitHub."""
+    Generate all pydoc documentation and add to GitHub."""
 
 from time import sleep
 from rebecca import *
@@ -19,7 +17,7 @@ from vio import *
 from eoin import *
 # add your import
 
-__author__ = 'Computer Systems & Networks 2019: Rebecca, Vio, Eoin'
+__author__ = 'Computer Systems & Networks 2019: Rebecca, Vio, Eoin, Sean, Adam, Matthew'
 __credits__ = 'Copyright 2019, Computer Systems & Networks Class 2019, Mallow College, eoinospealain@mallowcollege.ie, released on GPL.'
 __version__ = 'Prototype 0.1'
 
@@ -32,6 +30,7 @@ while True:
     message += "\nUptime is: " + up_time()  # rebecca
     message += "\nLoad is: " + load()  # rebecca
     message += "\nUser is: " + user()  # rebecca
+    message += "\nThere are " + str(users()) + " users and " + identity() + " is current user"  # sean
     message += "\nTime is " + current_time()  # rebecca
     message += "\nThe Host Hame is: " + get_hostname()  # rebecca
     message += "\n\n ----------------\n\n"
@@ -45,6 +44,7 @@ while True:
     html += "<p><b>Uptime</b> is: " + up_time()  # rebecca
     html += "<p><b>Load</b> is: " + load()  # rebecca
     html += "<p><b>User</b> is: " + user()  # rebecca
+    html += "<p>There are " + str(users()) + " users and " + identity() + " is current user"  # sean
     html += "<p><b>Time</b> is: " + current_time()  # rebecca
     html += "<p><b>The Host Hame is: </b> is " + get_hostname()  # rebecca
 
