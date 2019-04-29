@@ -18,10 +18,11 @@ from eoin import *
 from sean import *
 from matthew import *
 from adam import *
+from sebastian import *
 
 # add your import
 
-__author__ = 'Computer Systems & Networks 2019: Rebecca, Vio, Eoin, Sean, Adam, Matthew'
+__author__ = 'Computer Systems & Networks 2019: Rebecca, Vio, Eoin, Sean, Adam, Matthew, Sebastian'
 __credits__ = 'Copyright 2019, Computer Systems & Networks Class 2019, Mallow College, eoinospealain@mallowcollege.ie, released on GPL.'
 __version__ = 'Prototype 0.1'
 
@@ -39,6 +40,7 @@ while True:
     message += "\nThere are " + str(users()) + " users and " + identity() + " is current user"  # sean
     message += "\nTime is " + current_time()  # rebecca
     message += "\nThe Hostname is: " + get_hostname()  # rebecca
+    message += "\nThe MAC is: " + get_mac()  # sebastian
     message += "\nThe status of the server is: " + pingtest(server)  # adam
     spokenmessage = message
     message += "\n\n ----------------\n\n"
@@ -54,7 +56,8 @@ while True:
     html += "<p><b>User</b> is: " + user()  # rebecca
     html += "<p>There are " + str(users()) + " users and " + identity() + " is current user"  # sean
     html += "<p><b>Time</b> is: " + current_time()  # rebecca
-    html += "<p><b>The Hostname is: </b> is " + get_hostname()  # rebecca
+    html += "<p><b>The Hostname</b> is: " + get_hostname()  # rebecca
+    html +=  "<p><b>The MAC</b> is: " + get_mac()  # sebastian
     html += "<p><b>The status of the server is: </b> is " + pingtest(server)  # adam
 
     # add your HTML contribution here
