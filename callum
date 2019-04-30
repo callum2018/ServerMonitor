@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+
+from subprocess import check_output
+
+def get_ip():
+    "this will return the ip address of the computer that it is running on"
+    output = check_output(["hostname", "-I"]).decode("utf-8")
+    return output
+
+# print(get_ip())
